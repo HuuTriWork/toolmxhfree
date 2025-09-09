@@ -25,7 +25,7 @@ def get_token():
             token = f.read().strip()
             if token:
                 return token
-            
+    os.system("cls" if os.name == "nt" else "clear")        
     token = input("Nhập API Token (lấy tại https://like.vn/docs/api): ").strip()
     with open(token_file, "w") as f:
         f.write(token)
